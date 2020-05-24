@@ -45,27 +45,27 @@ export default class Home extends Component {
                         <h5 className="text">First Class eCommerce</h5>
                     </Text>
                 </div>
-                <Links className="row my-4">
-                    <a href='https://www.amazon.com' className="pic col-md-4 mx-auto nav-link">
-                        <Card title="Blanket" price="40" pic={blanket} />
+                <Links className="row my-3">
+                    <a href='https://www.amazon.com.au/Eco-Baby-Planet-Milestone-Blanket/dp/B07RT3T958' className="pic col-md-4 mx-auto nav-link">
+                        <Card title="Milestone Blanket" price="39.95" pic={blanket} />
                     </a>
-                    <a href='https://www.amazon.com' className="col-md-4 mx-auto nav-link">
-                        <Card title="Milestone Cards" price="15" pic={milestoneCards} />
+                    <a href='https://www.amazon.com.au/Eco-Baby-Planet-Newborn-Swaddle/dp/B083XLLJ4M' className="col-md-4 mx-auto nav-link">
+                        <Card title="Swaddle Blanket" price="34.95" pic={swaddle} />
                     </a>
-                    <a href='https://www.amazon.com' className="col-md-4 mx-auto nav-link">
-                        <Card title="Dinner Set" price="20" pic={dinnerSet} />
+                    <a href='https://www.amazon.com.au/Eco-Baby-Planet-Bamboo-Dinnerware/dp/B0848J2VSH' className="col-md-4 mx-auto nav-link">
+                        <Card title="Dinner Set" price="34.95" pic={dinnerSet} />
                     </a>
                 </Links>
-                <h1 className="my-4 text-muted text-center">Best Sellers</h1>
-                <Links className="row my-4">
-                    <a href='https://www.amazon.com' className="col-md-4 mx-auto nav-link">
-                        <Card title="Swaddle" price="25" pic={swaddle} />
+                {/* <h1 className="text-muted text-center">Best Sellers</h1> */}
+                <Links className="row my-3">
+                    <a href='https://www.amazon.com.au/Eco-Baby-Planet-Milestone-Cards/dp/B07RT3VH2Q' className="col-md-4 mx-auto nav-link">
+                        <Card title="Baby Milestone Cards" price="12.95" pic={milestoneCards} />
                     </a>
-                    <a href='https://www.amazon.com' className="col-md-4 mx-auto nav-link">
-                        <Card title="Gender Reveal Decorations" price="20" pic={genderRev} />
+                    <a href='https://www.amazon.com.au/Eco-Baby-Planet-Pregnancy-Milestone/dp/B07XXHJFJQ' className="col-md-4 mx-auto nav-link">
+                        <Card title="Pregnancy Cards" price="12.90" pic={pregnancyCards} />
                     </a>
-                    <a href='https://www.amazon.com' className="col-md-4 mx-auto nav-link">
-                        <Card title="Pregnancy Cards" price="15" pic={pregnancyCards} />
+                    <a href='https://www.amazon.com.au/Gender-Reveal-Party-Supplies-Decorations/dp/B083XN6HTZ' className="col-md-4 mx-auto nav-link">
+                        <Card title="Gender Reveal Decorations" price="29.90" pic={genderRev} />
                     </a>
                 </Links>
             </Main>
@@ -74,16 +74,14 @@ export default class Home extends Component {
 }
 
 const Main = styled.div`
-    margin-top: 70px;
-    @media (min-width: 1100px) {
-        width: 1140px;
-        margin: auto;
+    @media (max-width: 768px) {
+        margin-top: 68px;
     }
 `;
 const Text = styled.div`
     position: absolute; 
     color: var(--mainDark);
-    margin-top: 10vw;
+    margin-top: 8vw;
     text-align: right;
     width: 100%;
     padding-right: 2vw;
@@ -99,25 +97,20 @@ const Text = styled.div`
     }
     .text-sub {
         text-style: bold;
-        margin-bottom: 6vw;
         font-size: 2vw;
         @media (max-width: 768px) {
             text-style: bold;
-            margin-bottom: 6vw;
-            font-size: 4vw;
+            font-size: 3vw;
         }
     }
     .text { 
-        font-size: 1.5vw;
+        font-size: 2vw;
         @media (max-width: 768px) {
             font-size: 3vw;
         }
     }
     @media (max-width: 768px) {
         margin-top: 5vw;
-    }
-    @media (min-width: 1140px) {
-        width: 1140px;
     }
 `;
 const BannerImage = styled.div`
@@ -132,7 +125,7 @@ const BannerImage = styled.div`
 const Links = styled.div`
     background: var(--darkWhite);
     .bg {
-        padding: 40px;
+        padding: 30px;
         width: 100%;
         transition: all 0.5s linear;
         &:hover {

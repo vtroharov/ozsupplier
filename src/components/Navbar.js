@@ -75,11 +75,6 @@ const NavWrapper = styled.nav`
             color: var(--darkGrey) !important;
         }
     }
-    @media (min-width: 1140px) {
-        width: 1140px;
-        margin: auto;
-        text-align: center;
-    }
     @media (max-width: 768px) {
         position: absolute;
     }

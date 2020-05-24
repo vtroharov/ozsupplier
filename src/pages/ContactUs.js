@@ -16,7 +16,7 @@ export default class Contact extends Component {
       }
     handleSubmit(e) {
         e.preventDefault()
-        emailjs.sendForm('eco_test_email', 'template_TFs87T83', e.target, 'user_zD8cGOnT9q3uT280Ji6tJ')
+        emailjs.sendForm('ozsupplier_email', 'contact_us', e.target, 'user_P36dBX2APj7TMymPAWrYa')
         this.resetForm()
      }
     resetForm() {
@@ -34,10 +34,9 @@ export default class Contact extends Component {
         return (
             <Main className="container-fluid">
                 <div className="row ml-1">
-                
-                <CForm className="col-md-7">
+                <CForm className="col-md-7 my-5">
                     <Form  onSubmit={this.handleSubmit.bind(this)}>
-                        <div className="heading col-md-12 mx-auto text-left text-muted my-4">GET IN TOUCH!
+                        <div className="heading col-md-12 mx-auto text-left text-muted my-2">GET IN TOUCH!
                         </div>
                         <FormGroup className="mx-auto" controlId="formBasicName">
                             <Input
@@ -65,6 +64,7 @@ export default class Contact extends Component {
                             <Input
                                 type="textarea"
                                 name="message"
+                                rows="8"
                                 className="text-primary"
                                 value={this.state.message}
                                 onChange={this.handleChange.bind(this, 'message')}
@@ -78,7 +78,7 @@ export default class Contact extends Component {
                         </FormGroup>
                     </Form>
                 </CForm>
-                <Pic className="col-md-5">
+                <Pic className="col-md-5 my-5">
                     <BannerImage>
                         <img src={banner} alt="banner" className="bg" />
                     </BannerImage>
@@ -92,8 +92,8 @@ export default class Contact extends Component {
 const Main = styled.div`
     margin-top: 5px;
     margin-bottom: 5px;
-    @media (min-width: 1140px) {
-        width: 1140px;
+    @media (max-width: 768px) {
+        margin-top: 73px;
     }
 `;
 

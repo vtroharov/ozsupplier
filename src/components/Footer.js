@@ -9,19 +9,15 @@ export default class Footer extends Component {
 
     state = {
         user_email: '',
-        subject: 'Subscribe Form',
-        message: 'We want to subscribe to your mailing list',
       }
     handleSubmit(e) {
         e.preventDefault()
-        emailjs.sendForm('eco_test_email', 'template_TFs87T83', e.target, 'user_zD8cGOnT9q3uT280Ji6tJ')
+        emailjs.sendForm('ozsupplier_email', 'subscribe', e.target, 'user_P36dBX2APj7TMymPAWrYa')
         this.resetForm()
      }
     resetForm() {
         this.setState({
           user_email: '',
-          subject: 'Subscribe Form',
-          message: 'We want to subscribe to your mailing list',
         })
       }
     handleChange = (param, e) => {
@@ -51,7 +47,7 @@ export default class Footer extends Component {
                             </img>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 pl-4 pr-4">
                             <p>Sign Up To Receive Special Promotions</p>
                             <Form onSubmit={this.handleSubmit.bind(this)}>
                                 <FormGroup className="mx-auto" controlId="formBasicEmail">
@@ -102,10 +98,6 @@ const Bottom = styled.div`
     .social {
         cursor: pointer;
         margin-right: 6px;
-    }
-    @media (min-width: 1140px) {
-        width: 1140px;
-        margin: auto;
     }
 `;
 
