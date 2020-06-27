@@ -23,11 +23,11 @@ export default class Navbar extends Component {
                                 home
                             </Link>
                         </li>
-                        <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        {/* <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                             <Link to='/about_us' className='nav-link'>
                                 about us
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                             <Link to='/contact_us' className='nav-link'>
                                 contact us

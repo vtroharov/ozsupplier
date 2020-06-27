@@ -34,7 +34,7 @@ export default class Contact extends Component {
         return (
             <Main className="container-fluid">
                 <div className="row ml-1">
-                <CForm className="col-md-7 my-5">
+                <CForm className="col-md-6 my-md-5 my-sm-2 ml-md-4">
                     <Form  onSubmit={this.handleSubmit.bind(this)}>
                         <div className="heading col-md-12 mx-auto text-left text-muted my-2">GET IN TOUCH!
                         </div>
@@ -78,7 +78,7 @@ export default class Contact extends Component {
                         </FormGroup>
                     </Form>
                 </CForm>
-                <Pic className="col-md-5 my-5">
+                <Pic className="col-md-5 my-md-5 my-sm-2">
                     <BannerImage>
                         <img src={banner} alt="banner" className="bg" />
                     </BannerImage>
@@ -113,10 +113,12 @@ const BannerImage = styled.div`
     @media (max-width: 768px) {
         margin-top: 5px;
         margin-bottom: 5px;
+        margin-right: 15px;
     }
 `;
 const CForm = styled.div`
     background: var(--darkWhite);
+    margin-right: 15px;
     padding: 30px;
     .heading {
         text-align: center;

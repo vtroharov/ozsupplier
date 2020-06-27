@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import ContactUs from './pages/ContactUs';
-import AboutUs from './pages/AboutUs';
+// import AboutUs from './pages/AboutUs';
 
 class App extends Component {
   render () {
@@ -15,7 +15,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
-          <Route path="/about_us" component={AboutUs} />
+          {/* <Route path="/about_us" component={AboutUs} /> */}
           <Route path="/contact_us" component={ContactUs} />
           <Route component= {Home} />
         </Switch>
